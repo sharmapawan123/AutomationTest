@@ -17,7 +17,7 @@ public class HandleMultipleWindows {
 		driver.manage().window().maximize();
 		driver.get("https://www.hyrtutorials.com/p/window-handles-practice.html");
 		driver.findElement(By.id("newTabsWindowsBtn")).click();
-		Thread.sleep(2000);
+		Thread.sleep(6000);
 
 		String parentWndow = driver.getWindowHandle();
 		System.out.println(parentWndow);
