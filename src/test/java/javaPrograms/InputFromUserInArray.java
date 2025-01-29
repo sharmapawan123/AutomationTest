@@ -40,7 +40,7 @@ public class InputFromUserInArray {
 			System.out.println(num);
 		}
 
-		// Convert the int array in the String
+		// Convert the int array in the String format
 		System.out.print(Arrays.toString(arr));
 
 	}
