@@ -16,6 +16,7 @@ public class HandleMultipleWindows {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.hyrtutorials.com/p/window-handles-practice.html");
+		System.out.print("Browser is Launched");
 		driver.findElement(By.id("newTabsWindowsBtn")).click();
 		Thread.sleep(6000);
 
@@ -32,6 +33,7 @@ public class HandleMultipleWindows {
 			}
 		}
 		driver.switchTo().window(parentWndow);
+		System.out.print("Navigate to parent window");
 		Thread.sleep(2000);
 		driver.close();
 
