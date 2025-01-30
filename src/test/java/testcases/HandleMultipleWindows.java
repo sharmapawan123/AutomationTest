@@ -7,11 +7,13 @@ import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 import org.openqa.selenium.WebDriver;
 
 public class HandleMultipleWindows {
 
-	public static void main(String[] args) throws InterruptedException {
+	@Test
+	public void HandleMultipleWindows() throws InterruptedException {
 
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -25,7 +27,7 @@ public class HandleMultipleWindows {
 
 		Set<String> allWin = driver.getWindowHandles();
 		for (String win : allWin) {
-			//System.out.println(win);
+			// System.out.println(win);
 			if (!win.equals(parentWndow)) {
 				driver.switchTo().window(win);
 				System.out.println(driver.getTitle());
