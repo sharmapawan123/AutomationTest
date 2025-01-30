@@ -11,6 +11,7 @@ public class LaunchBrowser {
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://github.com/testng-team/testng-eclipse");
 		driver.manage().window().maximize();
+		System.out.print("Browser is Launched");
 
 	}
 
