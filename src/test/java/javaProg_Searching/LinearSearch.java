@@ -4,9 +4,9 @@ public class LinearSearch {
 
 	public static void main(String[] args) {
 
-		int a[] = { 1, 2, 3, 4, 5, 6, 7, 8 };
+		int a[] = { 11, 12, 13, 14, 15, 16, 17, 18 };
 		//int a[] = {};
-		int target = 6;
+		int target = 15;
 		int ans = linearSearch(a, target);
 		System.out.print(ans);
 
