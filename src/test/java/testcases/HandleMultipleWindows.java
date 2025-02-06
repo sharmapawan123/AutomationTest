@@ -21,13 +21,10 @@ public class HandleMultipleWindows {
 		System.out.print("Browser is Launched");
 		driver.findElement(By.id("newTabsWindowsBtn")).click();
 		Thread.sleep(6000);
-
 		String parentWndow = driver.getWindowHandle();
 		System.out.println(parentWndow);
-
 		Set<String> allWin = driver.getWindowHandles();
 		for (String win : allWin) {
-			// System.out.println(win);
 			if (!win.equals(parentWndow)) {
 				driver.switchTo().window(win);
 				System.out.println(driver.getTitle());
