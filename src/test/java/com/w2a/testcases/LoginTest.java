@@ -10,6 +10,6 @@ public class LoginTest extends TestBase {
 	public void loginAsBankManager() throws InterruptedException
 	{
 		driver.findElement(By.xpath(or.getProperty("banlManager"))).click();
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 	}
 }
