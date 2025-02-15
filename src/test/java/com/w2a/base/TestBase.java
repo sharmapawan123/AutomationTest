@@ -1,10 +1,15 @@
 package com.w2a.base;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -58,5 +63,18 @@ public class TestBase {
 	@AfterSuite
 	public void tearDown() {
 
+	}
+	
+	public String captureScreenShot(String tname)
+	{
+		
+		String timeStamp = new SimpleDateFormat("yyyymmddhhmmss").format(new Date());
+		TakesScreenshot takescreenShot =  (TakesScreenshot) driver;
+		File srcfile = takescreenShot.getScreenshotAs(OutputType.FILE);
+		String targetFilePath =  System.getProperty("user.dir")+"\\reports\\"+tname+ "_"+timeStamp+ ".png";
+		File targetFile = new File(targetFilePath);
+		srcfile.renameTo(targetFile);
+		return targetFilePath;
+		
 	}
 }

@@ -7,12 +7,16 @@ import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.openqa.selenium.WebDriver;
+	
 
+@Listeners(com.w2a.listeners.MyListener.class)
 public class HandleMultipleWindows {
 
-	@Test
+	@Test(priority = 1)
 	public void HandleMultipleWindows() throws InterruptedException {
 
 		WebDriver driver = new ChromeDriver();
@@ -36,6 +40,18 @@ public class HandleMultipleWindows {
 		Thread.sleep(2000);
 		driver.close();
 
+	}
+	
+	@Test(priority = 3)
+	public void validateTitle()
+	{
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.hyrtutorials.com/p/window-handles-practice.html");
+		System.out.print("Browser is Launched");
+		Assert.assertEquals(driver.getTitle(), "Test Title");
+		driver.quit();
+		
 	}
 
 }
