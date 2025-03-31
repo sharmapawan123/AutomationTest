@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.w2a.testcases.LoginTest">
+      <class name="testcases.HandleMultipleWindows">
         <methods>
-          <include name="tearDown"/>
-          <include name="loginAsBankManager"/>
-          <include name="setUp"/>
+          <include name="HandleMultipleWindows"/>
         </methods>
-      </class> <!-- com.w2a.testcases.LoginTest -->
+      </class> <!-- testcases.HandleMultipleWindows -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
