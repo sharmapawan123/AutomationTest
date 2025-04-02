@@ -52,6 +52,7 @@ public class HandleMultipleWindows {
 		Assert.assertEquals(driver.getTitle(), "Test Title");
 		driver.quit();
 		
+		
 	}
 
 }
