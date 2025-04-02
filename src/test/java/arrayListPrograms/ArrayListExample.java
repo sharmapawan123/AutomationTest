@@ -26,7 +26,8 @@ public class ArrayListExample {
 		
 		//remove the element is present in the list
 		list.remove(0);
-		System.out.println(""+ list);
+		System.out.println(list);
+
 	}
 
 }
