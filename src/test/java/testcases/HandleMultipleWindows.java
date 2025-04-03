@@ -49,7 +49,7 @@ public class HandleMultipleWindows {
 		driver.manage().window().maximize();
 		driver.get("https://www.hyrtutorials.com/p/window-handles-practice.html");
 		System.out.print("Browser is Launched");
-		Assert.assertEquals(driver.getTitle(), "Test Title from pawan ");
+		Assert.assertEquals(driver.getTitle(), "Test Title data");
 		driver.quit();
 		
 		
