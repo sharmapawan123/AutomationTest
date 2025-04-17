@@ -51,7 +51,7 @@ public class HandleMultipleWindows {
 		System.out.print("Browser is Launched");
 		Assert.assertEquals(driver.getTitle(), "Test Title from pawan ");
 		driver.quit();
-		
+		//Pawan also changed in same line 
 		
 	}
 
